@@ -7,6 +7,11 @@ set(CMAKE_DEPENDS_GENERATOR "MinGW Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
+  "C:/SpaceStation/CMakeLists.txt"
+  "CMakeFiles/4.2.1/CMakeCCompiler.cmake"
+  "CMakeFiles/4.2.1/CMakeCXXCompiler.cmake"
+  "CMakeFiles/4.2.1/CMakeRCCompiler.cmake"
+  "CMakeFiles/4.2.1/CMakeSystem.cmake"
   "C:/msys64/ucrt64/lib/cmake/glfw3/glfw3Config.cmake"
   "C:/msys64/ucrt64/lib/cmake/glfw3/glfw3ConfigVersion.cmake"
   "C:/msys64/ucrt64/lib/cmake/glfw3/glfw3Targets-release.cmake"
@@ -52,11 +57,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-windres.cmake"
   "C:/msys64/ucrt64/share/cmake/Modules/Platform/Windows.cmake"
   "C:/msys64/ucrt64/share/cmake/Modules/Platform/WindowsPaths.cmake"
-  "C:/thu_muc_du_an/CMakeLists.txt"
-  "CMakeFiles/4.2.1/CMakeCCompiler.cmake"
-  "CMakeFiles/4.2.1/CMakeCXXCompiler.cmake"
-  "CMakeFiles/4.2.1/CMakeRCCompiler.cmake"
-  "CMakeFiles/4.2.1/CMakeSystem.cmake"
   )
 
 # The corresponding makefile is:

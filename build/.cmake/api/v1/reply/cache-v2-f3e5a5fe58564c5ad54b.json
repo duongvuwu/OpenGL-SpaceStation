@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/thu_muc_du_an/build"
+			"value" : "c:/SpaceStation/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -575,7 +575,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/thu_muc_du_an/build/CMakeFiles/pkgRedirects"
+			"value" : "C:/SpaceStation/build/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -659,7 +659,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/thu_muc_du_an"
+			"value" : "C:/SpaceStation"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1387,7 +1387,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/thu_muc_du_an/build"
+			"value" : "C:/SpaceStation/build"
 		},
 		{
 			"name" : "SpaceStation_IS_TOP_LEVEL",
@@ -1411,7 +1411,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/thu_muc_du_an"
+			"value" : "C:/SpaceStation"
 		},
 		{
 			"name" : "glfw3_DIR",

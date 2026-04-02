@@ -56,10 +56,10 @@ RM = C:\msys64\ucrt64\bin\cmake.exe -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\thu_muc_du_an
+CMAKE_SOURCE_DIR = C:\SpaceStation
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\thu_muc_du_an\build
+CMAKE_BINARY_DIR = C:\SpaceStation\build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\thu_muc_du_an\build\CMakeFiles C:\thu_muc_du_an\build\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\SpaceStation\build\CMakeFiles C:\SpaceStation\build\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\thu_muc_du_an\build\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\SpaceStation\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -152,6 +152,54 @@ extern/glad/src/glad.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\SpaceStation.dir\build.make CMakeFiles/SpaceStation.dir/extern/glad/src/glad.c.s
 .PHONY : extern/glad/src/glad.c.s
 
+src/main.obj: src/main.cpp.obj
+.PHONY : src/main.obj
+
+# target to build an object file
+src/main.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SpaceStation.dir\build.make CMakeFiles/SpaceStation.dir/src/main.cpp.obj
+.PHONY : src/main.cpp.obj
+
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SpaceStation.dir\build.make CMakeFiles/SpaceStation.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SpaceStation.dir\build.make CMakeFiles/SpaceStation.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
+
+src/shader/Shader.obj: src/shader/Shader.cpp.obj
+.PHONY : src/shader/Shader.obj
+
+# target to build an object file
+src/shader/Shader.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SpaceStation.dir\build.make CMakeFiles/SpaceStation.dir/src/shader/Shader.cpp.obj
+.PHONY : src/shader/Shader.cpp.obj
+
+src/shader/Shader.i: src/shader/Shader.cpp.i
+.PHONY : src/shader/Shader.i
+
+# target to preprocess a source file
+src/shader/Shader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SpaceStation.dir\build.make CMakeFiles/SpaceStation.dir/src/shader/Shader.cpp.i
+.PHONY : src/shader/Shader.cpp.i
+
+src/shader/Shader.s: src/shader/Shader.cpp.s
+.PHONY : src/shader/Shader.s
+
+# target to generate assembly for a file
+src/shader/Shader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SpaceStation.dir\build.make CMakeFiles/SpaceStation.dir/src/shader/Shader.cpp.s
+.PHONY : src/shader/Shader.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -164,6 +212,12 @@ help:
 	@echo ... extern/glad/src/glad.obj
 	@echo ... extern/glad/src/glad.i
 	@echo ... extern/glad/src/glad.s
+	@echo ... src/main.obj
+	@echo ... src/main.i
+	@echo ... src/main.s
+	@echo ... src/shader/Shader.obj
+	@echo ... src/shader/Shader.i
+	@echo ... src/shader/Shader.s
 .PHONY : help
 
 

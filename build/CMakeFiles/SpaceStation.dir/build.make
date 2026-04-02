@@ -52,10 +52,10 @@ RM = C:\msys64\ucrt64\bin\cmake.exe -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\thu_muc_du_an
+CMAKE_SOURCE_DIR = C:\SpaceStation
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\thu_muc_du_an\build
+CMAKE_BINARY_DIR = C:\SpaceStation\build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/SpaceStation.dir/depend.make
@@ -71,38 +71,72 @@ include CMakeFiles/SpaceStation.dir/flags.make
 CMakeFiles/SpaceStation.dir/codegen:
 .PHONY : CMakeFiles/SpaceStation.dir/codegen
 
+CMakeFiles/SpaceStation.dir/src/main.cpp.obj: CMakeFiles/SpaceStation.dir/flags.make
+CMakeFiles/SpaceStation.dir/src/main.cpp.obj: CMakeFiles/SpaceStation.dir/includes_CXX.rsp
+CMakeFiles/SpaceStation.dir/src/main.cpp.obj: C:/SpaceStation/src/main.cpp
+CMakeFiles/SpaceStation.dir/src/main.cpp.obj: CMakeFiles/SpaceStation.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\SpaceStation\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/SpaceStation.dir/src/main.cpp.obj"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SpaceStation.dir/src/main.cpp.obj -MF CMakeFiles\SpaceStation.dir\src\main.cpp.obj.d -o CMakeFiles\SpaceStation.dir\src\main.cpp.obj -c C:\SpaceStation\src\main.cpp
+
+CMakeFiles/SpaceStation.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SpaceStation.dir/src/main.cpp.i"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\SpaceStation\src\main.cpp > CMakeFiles\SpaceStation.dir\src\main.cpp.i
+
+CMakeFiles/SpaceStation.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SpaceStation.dir/src/main.cpp.s"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\SpaceStation\src\main.cpp -o CMakeFiles\SpaceStation.dir\src\main.cpp.s
+
+CMakeFiles/SpaceStation.dir/src/shader/Shader.cpp.obj: CMakeFiles/SpaceStation.dir/flags.make
+CMakeFiles/SpaceStation.dir/src/shader/Shader.cpp.obj: CMakeFiles/SpaceStation.dir/includes_CXX.rsp
+CMakeFiles/SpaceStation.dir/src/shader/Shader.cpp.obj: C:/SpaceStation/src/shader/Shader.cpp
+CMakeFiles/SpaceStation.dir/src/shader/Shader.cpp.obj: CMakeFiles/SpaceStation.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\SpaceStation\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/SpaceStation.dir/src/shader/Shader.cpp.obj"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SpaceStation.dir/src/shader/Shader.cpp.obj -MF CMakeFiles\SpaceStation.dir\src\shader\Shader.cpp.obj.d -o CMakeFiles\SpaceStation.dir\src\shader\Shader.cpp.obj -c C:\SpaceStation\src\shader\Shader.cpp
+
+CMakeFiles/SpaceStation.dir/src/shader/Shader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SpaceStation.dir/src/shader/Shader.cpp.i"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\SpaceStation\src\shader\Shader.cpp > CMakeFiles\SpaceStation.dir\src\shader\Shader.cpp.i
+
+CMakeFiles/SpaceStation.dir/src/shader/Shader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SpaceStation.dir/src/shader/Shader.cpp.s"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\SpaceStation\src\shader\Shader.cpp -o CMakeFiles\SpaceStation.dir\src\shader\Shader.cpp.s
+
 CMakeFiles/SpaceStation.dir/extern/glad/src/glad.c.obj: CMakeFiles/SpaceStation.dir/flags.make
 CMakeFiles/SpaceStation.dir/extern/glad/src/glad.c.obj: CMakeFiles/SpaceStation.dir/includes_C.rsp
-CMakeFiles/SpaceStation.dir/extern/glad/src/glad.c.obj: C:/thu_muc_du_an/extern/glad/src/glad.c
+CMakeFiles/SpaceStation.dir/extern/glad/src/glad.c.obj: C:/SpaceStation/extern/glad/src/glad.c
 CMakeFiles/SpaceStation.dir/extern/glad/src/glad.c.obj: CMakeFiles/SpaceStation.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\thu_muc_du_an\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/SpaceStation.dir/extern/glad/src/glad.c.obj"
-	C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SpaceStation.dir/extern/glad/src/glad.c.obj -MF CMakeFiles\SpaceStation.dir\extern\glad\src\glad.c.obj.d -o CMakeFiles\SpaceStation.dir\extern\glad\src\glad.c.obj -c C:\thu_muc_du_an\extern\glad\src\glad.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\SpaceStation\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/SpaceStation.dir/extern/glad/src/glad.c.obj"
+	C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SpaceStation.dir/extern/glad/src/glad.c.obj -MF CMakeFiles\SpaceStation.dir\extern\glad\src\glad.c.obj.d -o CMakeFiles\SpaceStation.dir\extern\glad\src\glad.c.obj -c C:\SpaceStation\extern\glad\src\glad.c
 
 CMakeFiles/SpaceStation.dir/extern/glad/src/glad.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/SpaceStation.dir/extern/glad/src/glad.c.i"
-	C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\thu_muc_du_an\extern\glad\src\glad.c > CMakeFiles\SpaceStation.dir\extern\glad\src\glad.c.i
+	C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\SpaceStation\extern\glad\src\glad.c > CMakeFiles\SpaceStation.dir\extern\glad\src\glad.c.i
 
 CMakeFiles/SpaceStation.dir/extern/glad/src/glad.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/SpaceStation.dir/extern/glad/src/glad.c.s"
-	C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\thu_muc_du_an\extern\glad\src\glad.c -o CMakeFiles\SpaceStation.dir\extern\glad\src\glad.c.s
+	C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\SpaceStation\extern\glad\src\glad.c -o CMakeFiles\SpaceStation.dir\extern\glad\src\glad.c.s
 
 # Object files for target SpaceStation
 SpaceStation_OBJECTS = \
+"CMakeFiles/SpaceStation.dir/src/main.cpp.obj" \
+"CMakeFiles/SpaceStation.dir/src/shader/Shader.cpp.obj" \
 "CMakeFiles/SpaceStation.dir/extern/glad/src/glad.c.obj"
 
 # External object files for target SpaceStation
 SpaceStation_EXTERNAL_OBJECTS =
 
+SpaceStation.exe: CMakeFiles/SpaceStation.dir/src/main.cpp.obj
+SpaceStation.exe: CMakeFiles/SpaceStation.dir/src/shader/Shader.cpp.obj
 SpaceStation.exe: CMakeFiles/SpaceStation.dir/extern/glad/src/glad.c.obj
 SpaceStation.exe: CMakeFiles/SpaceStation.dir/build.make
 SpaceStation.exe: C:/msys64/ucrt64/lib/libglfw3.dll.a
 SpaceStation.exe: CMakeFiles/SpaceStation.dir/linkLibs.rsp
 SpaceStation.exe: CMakeFiles/SpaceStation.dir/objects1.rsp
 SpaceStation.exe: CMakeFiles/SpaceStation.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\thu_muc_du_an\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable SpaceStation.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\SpaceStation\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable SpaceStation.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\SpaceStation.dir\link.txt --verbose=$(VERBOSE)
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Đang copy thư mục assets sang thư mục build..."
-	C:\msys64\ucrt64\bin\cmake.exe -E copy_directory C:/thu_muc_du_an/assets C:/thu_muc_du_an/build/assets
+	C:\msys64\ucrt64\bin\cmake.exe -E copy_directory C:/SpaceStation/assets C:/SpaceStation/build/assets
 
 # Rule to build all files generated by this target.
 CMakeFiles/SpaceStation.dir/build: SpaceStation.exe
@@ -113,6 +147,6 @@ CMakeFiles/SpaceStation.dir/clean:
 .PHONY : CMakeFiles/SpaceStation.dir/clean
 
 CMakeFiles/SpaceStation.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\thu_muc_du_an C:\thu_muc_du_an C:\thu_muc_du_an\build C:\thu_muc_du_an\build C:\thu_muc_du_an\build\CMakeFiles\SpaceStation.dir\DependInfo.cmake "--color=$(COLOR)" SpaceStation
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\SpaceStation C:\SpaceStation C:\SpaceStation\build C:\SpaceStation\build C:\SpaceStation\build\CMakeFiles\SpaceStation.dir\DependInfo.cmake "--color=$(COLOR)" SpaceStation
 .PHONY : CMakeFiles/SpaceStation.dir/depend
 

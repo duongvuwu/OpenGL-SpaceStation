@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "name": "SpaceStation-MinGW",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/extern/glad/include",
+                "${workspaceFolder}/extern/glm",
+                "${workspaceFolder}/extern/stb"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "compilerPath": "C:/msys64/ucrt64/bin/g++.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-gcc-x64",
+            "compileCommands": "${workspaceFolder}/build/compile_commands.json"
+        }
+    ],
+    "version": 4
+}

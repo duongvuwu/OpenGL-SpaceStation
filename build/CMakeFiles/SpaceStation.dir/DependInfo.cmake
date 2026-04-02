@@ -8,7 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/thu_muc_du_an/extern/glad/src/glad.c" "CMakeFiles/SpaceStation.dir/extern/glad/src/glad.c.obj" "gcc" "CMakeFiles/SpaceStation.dir/extern/glad/src/glad.c.obj.d"
+  "C:/SpaceStation/extern/glad/src/glad.c" "CMakeFiles/SpaceStation.dir/extern/glad/src/glad.c.obj" "gcc" "CMakeFiles/SpaceStation.dir/extern/glad/src/glad.c.obj.d"
+  "C:/SpaceStation/src/main.cpp" "CMakeFiles/SpaceStation.dir/src/main.cpp.obj" "gcc" "CMakeFiles/SpaceStation.dir/src/main.cpp.obj.d"
+  "C:/SpaceStation/src/shader/Shader.cpp" "CMakeFiles/SpaceStation.dir/src/shader/Shader.cpp.obj" "gcc" "CMakeFiles/SpaceStation.dir/src/shader/Shader.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

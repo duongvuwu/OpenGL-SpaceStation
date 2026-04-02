@@ -16,7 +16,7 @@ find_package(glfw3 REQUIRED)
 
 # 5. Thu thập các file mã nguồn
 # Lấy tất cả các file .cpp trong thư mục gốc
-file(GLOB SOURCES "*.cpp") 
+file(GLOB_RECURSE SOURCES "src/*.cpp") 
 # Khai báo file mã nguồn của GLAD
 set(GLAD_SOURCE "extern/glad/src/glad.c")
 
@@ -27,9 +27,11 @@ add_executable(${PROJECT_NAME} ${SOURCES} ${GLAD_SOURCE})
 # 7. Khai báo các thư mục chứa file Header (.h, .hpp)
 # target_include_directories tốt hơn include_directories vì nó chỉ áp dụng riêng cho target SpaceStation
 target_include_directories(${PROJECT_NAME} PRIVATE
-    ${CMAKE_CURRENT_SOURCE_DIR}/extern/glad
+    ${CMAKE_CURRENT_SOURCE_DIR}/extern/glad/include
     ${CMAKE_CURRENT_SOURCE_DIR}/extern/glm
     ${CMAKE_CURRENT_SOURCE_DIR}/extern/stb
+    ${CMAKE_CURRENT_SOURCE_DIR}
+    ${CMAKE_CURRENT_SOURCE_DIR}/src
 )
 
 # 8. Liên kết (Link) các thư viện vào dự án

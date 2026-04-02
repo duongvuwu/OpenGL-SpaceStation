@@ -84,7 +84,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "SpaceStation::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-SpaceStation-Debug-82c292ab6274e63983ac.json",
+					"jsonFile" : "target-SpaceStation-Debug-19dc6bb82747bec56b9c.json",
 					"name" : "SpaceStation",
 					"projectIndex" : 0
 				}
@@ -94,8 +94,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/thu_muc_du_an/build",
-		"source" : "C:/thu_muc_du_an"
+		"build" : "C:/SpaceStation/build",
+		"source" : "C:/SpaceStation"
 	},
 	"version" : 
 	{
