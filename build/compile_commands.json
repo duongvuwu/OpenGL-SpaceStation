@@ -1,0 +1,8 @@
+[
+{
+  "directory": "C:/thu_muc_du_an/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DGLFW_DLL @CMakeFiles/SpaceStation.dir/includes_C.rsp -g -o CMakeFiles\\SpaceStation.dir\\extern\\glad\\src\\glad.c.obj -c C:\\thu_muc_du_an\\extern\\glad\\src\\glad.c",
+  "file": "C:/thu_muc_du_an/extern/glad/src/glad.c",
+  "output": "CMakeFiles/SpaceStation.dir/extern/glad/src/glad.c.obj"
+}
+]

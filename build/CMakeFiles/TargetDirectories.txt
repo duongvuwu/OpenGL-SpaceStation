@@ -1,0 +1,3 @@
+C:/thu_muc_du_an/build/CMakeFiles/SpaceStation.dir
+C:/thu_muc_du_an/build/CMakeFiles/edit_cache.dir
+C:/thu_muc_du_an/build/CMakeFiles/rebuild_cache.dir
