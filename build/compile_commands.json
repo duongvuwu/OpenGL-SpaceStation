@@ -1,20 +1,20 @@
 [
 {
-  "directory": "C:/SpaceStation/build",
-  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -DGLFW_DLL @CMakeFiles/SpaceStation.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\SpaceStation.dir\\src\\main.cpp.obj -c C:\\SpaceStation\\src\\main.cpp",
-  "file": "C:/SpaceStation/src/main.cpp",
-  "output": "CMakeFiles/SpaceStation.dir/src/main.cpp.obj"
+  "directory": "C:/SpaceStation1/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/SpaceStation1.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\SpaceStation1.dir\\src\\main.cpp.obj -c C:\\SpaceStation1\\src\\main.cpp",
+  "file": "C:/SpaceStation1/src/main.cpp",
+  "output": "CMakeFiles/SpaceStation1.dir/src/main.cpp.obj"
 },
 {
-  "directory": "C:/SpaceStation/build",
-  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -DGLFW_DLL @CMakeFiles/SpaceStation.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\SpaceStation.dir\\src\\shader\\Shader.cpp.obj -c C:\\SpaceStation\\src\\shader\\Shader.cpp",
-  "file": "C:/SpaceStation/src/shader/Shader.cpp",
-  "output": "CMakeFiles/SpaceStation.dir/src/shader/Shader.cpp.obj"
+  "directory": "C:/SpaceStation1/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe  @CMakeFiles/SpaceStation1.dir/includes_C.rsp -g -o CMakeFiles\\SpaceStation1.dir\\extern\\glad\\src\\glad.c.obj -c C:\\SpaceStation1\\extern\\glad\\src\\glad.c",
+  "file": "C:/SpaceStation1/extern/glad/src/glad.c",
+  "output": "CMakeFiles/SpaceStation1.dir/extern/glad/src/glad.c.obj"
 },
 {
-  "directory": "C:/SpaceStation/build",
-  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DGLFW_DLL @CMakeFiles/SpaceStation.dir/includes_C.rsp -g -o CMakeFiles\\SpaceStation.dir\\extern\\glad\\src\\glad.c.obj -c C:\\SpaceStation\\extern\\glad\\src\\glad.c",
-  "file": "C:/SpaceStation/extern/glad/src/glad.c",
-  "output": "CMakeFiles/SpaceStation.dir/extern/glad/src/glad.c.obj"
+  "directory": "C:/SpaceStation1/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/SpaceStation1.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\SpaceStation1.dir\\src\\shader\\Shader.cpp.obj -c C:\\SpaceStation1\\src\\shader\\Shader.cpp",
+  "file": "C:/SpaceStation1/src/shader/Shader.cpp",
+  "output": "CMakeFiles/SpaceStation1.dir/src/shader/Shader.cpp.obj"
 }
 ]

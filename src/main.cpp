@@ -1,3 +1,8 @@
+#include "Model.h"
+
+#include <vector>
+#include <string>
+
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h" // Hoặc đường dẫn chính xác tới file bạn vừa lưu
 
@@ -11,6 +16,7 @@
 #include "shader/Shader.h"
 #include "Camera.h"
 
+
 // Giả định Student A đã cung cấp file này chứa mảng roomVertices, roomVertexCount 
 // và actorVertices, actorVertexCount (cho quả cầu)
 #include "../layout_data.h" 
@@ -23,6 +29,7 @@ void mouse_callback(GLFWwindow* window, double xposIn, double yposIn);
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
 void processInput(GLFWwindow *window);
 unsigned int loadTexture(char const * path);
+unsigned int loadCubemap(std::vector<std::string> faces);
 
 // --- THÔNG SỐ CỬA SỔ ---
 const unsigned int SCR_WIDTH = 1280;
@@ -40,6 +47,7 @@ float lastFrame = 0.0f;
 
 int main()
 {
+    printf("\n\n🚀 TRẠM VŨ TRỤ ĐÃ KHỞI ĐỘNG!\n\n");
     // =========================================================================
     // 1. THIẾT LẬP GLFW & CỬA SỔ
     // =========================================================================
@@ -112,10 +120,47 @@ int main()
     // (Tùy chọn) Khởi tạo actorVAO, actorVBO cho quả cầu nhân vật tương tự như trên...
     
     // Nạp Texture (Đảm bảo bạn có file wall_texture.png có kênh Alpha)
-    unsigned int wallTexture = loadTexture("C:/SpaceStation/assets/textures/wall_texture.png");
+    unsigned int wallTexture = loadTexture("C:/SpaceStation1/assets/textures/wall_texture.png");
     spaceStationShader.use();
     spaceStationShader.setInt("diffuseTexture", 0);
+    // [THÊM MỚI] KHỞI TẠO DỮ LIỆU SKYBOX
+float skyboxVertices[] = {
+        // positions          
+        -1.0f,  1.0f, -1.0f, -1.0f, -1.0f, -1.0f,  1.0f, -1.0f, -1.0f,
+         1.0f, -1.0f, -1.0f,  1.0f,  1.0f, -1.0f, -1.0f,  1.0f, -1.0f,
+        -1.0f, -1.0f,  1.0f, -1.0f, -1.0f, -1.0f, -1.0f,  1.0f, -1.0f,
+        -1.0f,  1.0f, -1.0f, -1.0f,  1.0f,  1.0f, -1.0f, -1.0f,  1.0f,
+         1.0f, -1.0f, -1.0f,  1.0f, -1.0f,  1.0f,  1.0f,  1.0f,  1.0f,
+         1.0f,  1.0f,  1.0f,  1.0f,  1.0f, -1.0f,  1.0f, -1.0f, -1.0f,
+        -1.0f, -1.0f,  1.0f, -1.0f,  1.0f,  1.0f,  1.0f,  1.0f,  1.0f,
+         1.0f,  1.0f,  1.0f,  1.0f, -1.0f,  1.0f, -1.0f, -1.0f,  1.0f,
+        -1.0f,  1.0f, -1.0f,  1.0f,  1.0f, -1.0f,  1.0f,  1.0f,  1.0f,
+         1.0f,  1.0f,  1.0f, -1.0f,  1.0f,  1.0f, -1.0f,  1.0f, -1.0f,
+        -1.0f, -1.0f, -1.0f, -1.0f, -1.0f,  1.0f,  1.0f, -1.0f, -1.0f,
+         1.0f, -1.0f, -1.0f, -1.0f, -1.0f,  1.0f,  1.0f, -1.0f,  1.0f
+    };
 
+    unsigned int skyboxVAO, skyboxVBO;
+    glGenVertexArrays(1, &skyboxVAO);
+    glGenBuffers(1, &skyboxVBO);
+    glBindVertexArray(skyboxVAO);
+    glBindBuffer(GL_ARRAY_BUFFER, skyboxVBO);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(skyboxVertices), &skyboxVertices, GL_STATIC_DRAW);
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+    glEnableVertexAttribArray(0);
+
+    // Nạp Shader và Texture cho Skybox
+    Shader skyboxShader("../assets/skybox.vs", "../assets/skybox.fs");
+    std::vector<std::string> faces = {
+        "../assets/skybox/right.jpg", "../assets/skybox/left.jpg",
+        "../assets/skybox/top.jpg",   "../assets/skybox/bottom.jpg",
+        "../assets/skybox/front.jpg", "../assets/skybox/back.jpg"
+    };
+    unsigned int cubemapTexture = loadCubemap(faces);
+    
+    skyboxShader.use();
+    skyboxShader.setInt("skybox", 1);
+    Model milano("assets/GotMillanoDespiece.obj");
     // =========================================================================
     // 5. VÒNG LẶP RENDER CHÍNH (MAIN LOOP)
     // =========================================================================
@@ -187,12 +232,49 @@ int main()
             // glBindVertexArray(actorVAO);
             // glDrawArrays(GL_TRIANGLES, 0, actorVertexCount);
         }
+        // --- VẼ SKYBOX ---
+        glDepthFunc(GL_LEQUAL); // Đổi hàm test chiều sâu: Cho phép vẽ nếu chiều sâu <= 1.0 (vô cực)
+        skyboxShader.use();
+        
+        // Truyền ma trận View và Projection
+        skyboxShader.setMat4("view", view);
+        skyboxShader.setMat4("projection", projection);
 
+        // Vẽ khối lập phương khổng lồ
+        glBindVertexArray(skyboxVAO);
+        glActiveTexture(GL_TEXTURE1);
+        glBindTexture(GL_TEXTURE_CUBE_MAP, cubemapTexture);
+        glDrawArrays(GL_TRIANGLES, 0, 36);
+        glBindVertexArray(0);
+        
+        glDepthFunc(GL_LESS); // Trả lại hàm test chiều sâu về mặc định cho khung hình sau
+   
+        spaceStationShader.use();
+        
+        glm::mat4 modelMillano = glm::mat4(1.0f);
+        // 1. Lùi ra xa 10 mét để có góc nhìn rộng
+        modelMillano = glm::translate(modelMillano, glm::vec3(0.0f, 0.0f, 7.0f)); 
+        
+        // 2. RADAR QUÉT: Bắt nó tự động xoay tròn liên tục! 
+        // Dù nó có bị lệch tâm tít thò lò ở đâu, nó cũng sẽ vung vẩy quét ngang qua màn hình!
+        // modelMillano = glm::rotate(modelMillano, (float)glfwGetTime(), glm::vec3(0.0f, 1.0f, 0.0f)); 
+        
+        // 3. THU NHỎ (Thử mức 0.01 trước, nếu vẫn không thấy thì đổi thành 0.001)
+        modelMillano = glm::scale(modelMillano, glm::vec3(1.0f, 1.0f, 1.0f)); 
+
+        spaceStationShader.setMat4("model", modelMillano);
+        
+        // 4. KÍNH X-QUANG: Ép vẽ bằng lưới thép màu trắng sáng rực, bất chấp ánh sáng!
+        // glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); 
+        
+        milano.Draw(); // VẼ!!!
+        
+        // Trả lại chế độ vẽ đặc cho các hộp gỗ cũ của bạn
+        glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
         // Đổi buffers và lấy các sự kiện I/O
         glfwSwapBuffers(window);
         glfwPollEvents();
     }
-
     // =========================================================================
     // 6. GIẢI PHÓNG BỘ NHỚ
     // =========================================================================
@@ -304,6 +386,43 @@ unsigned int loadTexture(char const * path)
         std::cout << "Texture failed to load at path: " << path << std::endl;
         stbi_image_free(data);
     }
+
+    return textureID;
+}
+// Hàm để nạp CubeMap
+unsigned int loadCubemap(std::vector<std::string> faces)
+{
+    unsigned int textureID;
+    glGenTextures(1, &textureID);
+    glBindTexture(GL_TEXTURE_CUBE_MAP, textureID);
+
+    stbi_set_flip_vertically_on_load(false); // CubeMap thường không cần lật ảnh
+
+    int width, height, nrChannels;
+    for (unsigned int i = 0; i < faces.size(); i++)
+    {
+        // Số 3 ở cuối: ÉP CỨNG đọc ảnh dưới dạng RGB (3 kênh màu)
+        unsigned char *data = stbi_load(faces[i].c_str(), &width, &height, &nrChannels, 3); 
+        if (data)
+        {
+            glPixelStorei(GL_UNPACK_ALIGNMENT, 1); // Chống lỗi méo ảnh
+            // Vì đã ép 3 kênh màu, ta mạnh dạn hardcode GL_RGB luôn
+            glTexImage2D(GL_TEXTURE_CUBE_MAP_POSITIVE_X + i, 
+                         0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+            stbi_image_free(data);
+            std::cout << "Thanh cong nạp mat Skybox: " << faces[i] << " (" << width << "x" << height << ")" << std::endl;
+        }
+        else
+        {
+            std::cout << "LOI: Khong the nap Skybox tai: " << faces[i] << std::endl;
+            stbi_image_free(data);
+        }
+    }
+    glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE);
 
     return textureID;
 }

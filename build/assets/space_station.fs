@@ -22,8 +22,8 @@ uniform vec3 viewPos;
 void main()
 {
     // Lấy màu (RGB) và độ trong suốt (Alpha) từ Texture
-    // vec4 texel = texture(diffuseTexture, TexCoords);
-    vec4 texel = vec4(1.0, 1.0, 1.0, 1.0);
+    vec4 texel = texture(diffuseTexture, TexCoords);
+    //vec4 texel = vec4(1.0, 1.0, 1.0, 1.0);
     // --- MÔ HÌNH CHIẾU SÁNG PHONG ---
     
     // 1. AMBIENT (Ánh sáng môi trường)

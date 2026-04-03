@@ -56,10 +56,10 @@ RM = C:\msys64\ucrt64\bin\cmake.exe -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\SpaceStation
+CMAKE_SOURCE_DIR = C:\SpaceStation1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\SpaceStation\build
+CMAKE_BINARY_DIR = C:\SpaceStation1\build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\SpaceStation\build\CMakeFiles C:\SpaceStation\build\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\SpaceStation1\build\CMakeFiles C:\SpaceStation1\build\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\SpaceStation\build\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\SpaceStation1\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -116,24 +116,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named SpaceStation
+# Target rules for targets named SpaceStation1
 
 # Build rule for target.
-SpaceStation: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 SpaceStation
-.PHONY : SpaceStation
+SpaceStation1: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 SpaceStation1
+.PHONY : SpaceStation1
 
 # fast build rule for target.
-SpaceStation/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SpaceStation.dir\build.make CMakeFiles/SpaceStation.dir/build
-.PHONY : SpaceStation/fast
+SpaceStation1/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SpaceStation1.dir\build.make CMakeFiles/SpaceStation1.dir/build
+.PHONY : SpaceStation1/fast
 
 extern/glad/src/glad.obj: extern/glad/src/glad.c.obj
 .PHONY : extern/glad/src/glad.obj
 
 # target to build an object file
 extern/glad/src/glad.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SpaceStation.dir\build.make CMakeFiles/SpaceStation.dir/extern/glad/src/glad.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SpaceStation1.dir\build.make CMakeFiles/SpaceStation1.dir/extern/glad/src/glad.c.obj
 .PHONY : extern/glad/src/glad.c.obj
 
 extern/glad/src/glad.i: extern/glad/src/glad.c.i
@@ -141,7 +141,7 @@ extern/glad/src/glad.i: extern/glad/src/glad.c.i
 
 # target to preprocess a source file
 extern/glad/src/glad.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SpaceStation.dir\build.make CMakeFiles/SpaceStation.dir/extern/glad/src/glad.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SpaceStation1.dir\build.make CMakeFiles/SpaceStation1.dir/extern/glad/src/glad.c.i
 .PHONY : extern/glad/src/glad.c.i
 
 extern/glad/src/glad.s: extern/glad/src/glad.c.s
@@ -149,7 +149,7 @@ extern/glad/src/glad.s: extern/glad/src/glad.c.s
 
 # target to generate assembly for a file
 extern/glad/src/glad.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SpaceStation.dir\build.make CMakeFiles/SpaceStation.dir/extern/glad/src/glad.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SpaceStation1.dir\build.make CMakeFiles/SpaceStation1.dir/extern/glad/src/glad.c.s
 .PHONY : extern/glad/src/glad.c.s
 
 src/main.obj: src/main.cpp.obj
@@ -157,7 +157,7 @@ src/main.obj: src/main.cpp.obj
 
 # target to build an object file
 src/main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SpaceStation.dir\build.make CMakeFiles/SpaceStation.dir/src/main.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SpaceStation1.dir\build.make CMakeFiles/SpaceStation1.dir/src/main.cpp.obj
 .PHONY : src/main.cpp.obj
 
 src/main.i: src/main.cpp.i
@@ -165,7 +165,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SpaceStation.dir\build.make CMakeFiles/SpaceStation.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SpaceStation1.dir\build.make CMakeFiles/SpaceStation1.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -173,7 +173,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SpaceStation.dir\build.make CMakeFiles/SpaceStation.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SpaceStation1.dir\build.make CMakeFiles/SpaceStation1.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 src/shader/Shader.obj: src/shader/Shader.cpp.obj
@@ -181,7 +181,7 @@ src/shader/Shader.obj: src/shader/Shader.cpp.obj
 
 # target to build an object file
 src/shader/Shader.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SpaceStation.dir\build.make CMakeFiles/SpaceStation.dir/src/shader/Shader.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SpaceStation1.dir\build.make CMakeFiles/SpaceStation1.dir/src/shader/Shader.cpp.obj
 .PHONY : src/shader/Shader.cpp.obj
 
 src/shader/Shader.i: src/shader/Shader.cpp.i
@@ -189,7 +189,7 @@ src/shader/Shader.i: src/shader/Shader.cpp.i
 
 # target to preprocess a source file
 src/shader/Shader.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SpaceStation.dir\build.make CMakeFiles/SpaceStation.dir/src/shader/Shader.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SpaceStation1.dir\build.make CMakeFiles/SpaceStation1.dir/src/shader/Shader.cpp.i
 .PHONY : src/shader/Shader.cpp.i
 
 src/shader/Shader.s: src/shader/Shader.cpp.s
@@ -197,7 +197,7 @@ src/shader/Shader.s: src/shader/Shader.cpp.s
 
 # target to generate assembly for a file
 src/shader/Shader.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SpaceStation.dir\build.make CMakeFiles/SpaceStation.dir/src/shader/Shader.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SpaceStation1.dir\build.make CMakeFiles/SpaceStation1.dir/src/shader/Shader.cpp.s
 .PHONY : src/shader/Shader.cpp.s
 
 # Help Target
@@ -208,7 +208,7 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... SpaceStation
+	@echo ... SpaceStation1
 	@echo ... extern/glad/src/glad.obj
 	@echo ... extern/glad/src/glad.i
 	@echo ... extern/glad/src/glad.s

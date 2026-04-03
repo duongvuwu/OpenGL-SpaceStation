@@ -53,20 +53,20 @@ RM = C:\msys64\ucrt64\bin\cmake.exe -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\SpaceStation
+CMAKE_SOURCE_DIR = C:\SpaceStation1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\SpaceStation\build
+CMAKE_BINARY_DIR = C:\SpaceStation1\build
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/SpaceStation.dir/all
+all: CMakeFiles/SpaceStation1.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
-codegen: CMakeFiles/SpaceStation.dir/codegen
+codegen: CMakeFiles/SpaceStation1.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -74,40 +74,40 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/SpaceStation.dir/clean
+clean: CMakeFiles/SpaceStation1.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/SpaceStation.dir
+# Target rules for target CMakeFiles/SpaceStation1.dir
 
 # All Build rule for target.
-CMakeFiles/SpaceStation.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SpaceStation.dir\build.make CMakeFiles/SpaceStation.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SpaceStation.dir\build.make CMakeFiles/SpaceStation.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\SpaceStation\build\CMakeFiles --progress-num=1,2,3,4 "Built target SpaceStation"
-.PHONY : CMakeFiles/SpaceStation.dir/all
+CMakeFiles/SpaceStation1.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SpaceStation1.dir\build.make CMakeFiles/SpaceStation1.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SpaceStation1.dir\build.make CMakeFiles/SpaceStation1.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\SpaceStation1\build\CMakeFiles --progress-num=1,2,3,4 "Built target SpaceStation1"
+.PHONY : CMakeFiles/SpaceStation1.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/SpaceStation.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\SpaceStation\build\CMakeFiles 4
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/SpaceStation.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\SpaceStation\build\CMakeFiles 0
-.PHONY : CMakeFiles/SpaceStation.dir/rule
+CMakeFiles/SpaceStation1.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\SpaceStation1\build\CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/SpaceStation1.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\SpaceStation1\build\CMakeFiles 0
+.PHONY : CMakeFiles/SpaceStation1.dir/rule
 
 # Convenience name for target.
-SpaceStation: CMakeFiles/SpaceStation.dir/rule
-.PHONY : SpaceStation
+SpaceStation1: CMakeFiles/SpaceStation1.dir/rule
+.PHONY : SpaceStation1
 
 # codegen rule for target.
-CMakeFiles/SpaceStation.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SpaceStation.dir\build.make CMakeFiles/SpaceStation.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\SpaceStation\build\CMakeFiles --progress-num=1,2,3,4 "Finished codegen for target SpaceStation"
-.PHONY : CMakeFiles/SpaceStation.dir/codegen
+CMakeFiles/SpaceStation1.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SpaceStation1.dir\build.make CMakeFiles/SpaceStation1.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\SpaceStation1\build\CMakeFiles --progress-num=1,2,3,4 "Finished codegen for target SpaceStation1"
+.PHONY : CMakeFiles/SpaceStation1.dir/codegen
 
 # clean rule for target.
-CMakeFiles/SpaceStation.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SpaceStation.dir\build.make CMakeFiles/SpaceStation.dir/clean
-.PHONY : CMakeFiles/SpaceStation.dir/clean
+CMakeFiles/SpaceStation1.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SpaceStation1.dir\build.make CMakeFiles/SpaceStation1.dir/clean
+.PHONY : CMakeFiles/SpaceStation1.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

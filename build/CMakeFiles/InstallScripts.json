@@ -1,7 +1,7 @@
 {
 	"InstallScripts" : 
 	[
-		"C:/SpaceStation/build/cmake_install.cmake"
+		"C:/SpaceStation1/build/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

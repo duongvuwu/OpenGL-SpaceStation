@@ -1,0 +1,1 @@
+ C:/SpaceStation1/extern/assimp/libassimp.dll.a C:/SpaceStation1/extern/assimp/libunit.dll.a C:/msys64/ucrt64/lib/libglfw3.a -lopengl32 -lgdi32 -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
